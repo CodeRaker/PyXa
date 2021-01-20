@@ -9,6 +9,7 @@ The commands consists of network packets, containing positions of all the joints
 
 In this repository is a DEMO remote, to control the Hexa, using the following control scheme:
 
+```
 [w] - Walk Forward
 [a] - Walk Backward
 [q] - Rotate Head CW
@@ -21,6 +22,7 @@ In this repository is a DEMO remote, to control the Hexa, using the following co
 [4] - Change LED briefly to RED
 [5] - Change LED briefly to GREEN
 [6] - Change LED briefly to BLUE
+```
 
 Pygame is used to create a Display showing joint positions, battery level and camera feed.
 
@@ -50,9 +52,8 @@ In order to get started, you will need to perform a couple of preparation steps 
 **The Hexa**
 
 1. Login using SSH (enable developer mode from the Phone App, to get username/password) - default: root/boot2mind
-a. Get your user hash (for the settings file), using this command: 
 
-`grep -a -i -m 1 "userhash" /var/local/mind/log | awk '{print $8}'`.
+a. Get your user hash (for the settings file), using this command: `grep -a -i -m 1 "userhash" /var/local/mind/log | awk '{print $8}'`.
 
 If you get no result from the command, try generating some traffic first, by opening the Hexa Simulator on your PC and trigger traffic,
 by moving the legs under "New Motion" and the mode "Hexa+Simulator" (where you enter the IP, to move the robot in realtime).
